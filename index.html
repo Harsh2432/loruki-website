@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Deploy web apps of all kinds, from large scale enterprise APIs to static websites for individuals.">
+    <meta name="description"
+        content="Deploy web apps of all kinds, from large scale enterprise APIs to static websites for individuals.">
     <meta name="keywords" content="Loruki, Cloud Hosting, HTML, CSS">
     <meta name="author" content="Harsh Jadhav">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -47,7 +48,13 @@
 
             <div class="showcase-form card">
                 <h2>Request a Demo</h2>
-                <form>
+                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden">
+                        <label>
+                            Don't fill this out if you're human: <input name="bot-field" />
+                        </label>
+                    </p>
                     <div class="form-control">
                         <input type="text" name="name" placeholder="Name" required>
                     </div>
